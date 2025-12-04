@@ -33,104 +33,101 @@ public class DataLoader {
                 usuarioRepo.save(admin);
             }
             if (categoriasRepo.count() == 0) {
-                categoriasRepo.save(new Categoria(null, "RPG"));
-                categoriasRepo.save(new Categoria(null, "Acción"));
-                categoriasRepo.save(new Categoria(null, "Metroidvania"));
-                categoriasRepo.save(new Categoria(null, "Aventura"));
-                categoriasRepo.save(new Categoria(null, "Shooter"));
-                categoriasRepo.save(new Categoria(null, "Deportes"));
-                categoriasRepo.save(new Categoria(null, "Exploración"));
+                categoriasRepo.save(new Categoria(null, "Ropa"));
+                categoriasRepo.save(new Categoria(null, "Skate"));
+                categoriasRepo.save(new Categoria(null, "Tabla"));
+                categoriasRepo.save(new Categoria(null, "Ruedas"));
             }
             if (productosRepo.count() == 0) {
 
                 productosRepo.save(new Productos(
                         null,
-                        "Persona 3: Reload",
-                        "Persona 3 Reload es un remake del RPG de 2006 Persona 3.",
-                        "/images/pic01.jpg",
+                        "Foundation - Tabla Star y Moon",
+                        "Solo la Tabla de skate Foundation Star, Color Amarillo.",
+                        "https://wallride.cl/cdn/shop/files/WhatsAppImage2025-11-18at16.31.29_360x.jpg?v=1763494887",
                         18500.0,
                         2,
-                        "RPG"
+                        "Tabla"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "God of War: Ragnarok",
-                        "Secuela de God Of War de kratos y su hijo.",
-                        "/images/pic02.jpg",
-                        25500.0,
+                        "Foundation - Skate Completo",
+                        "Tabla de skate completa Foundation Oval Blue, Color Azul.",
+                        "https://wallride.cl/cdn/shop/files/oval-blue-complete_360x.png?v=1759856249",
+                        84500.0,
                         4,
-                        "Acción"
+                        "Skate"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "SilkSong",
-                        "Secuela de Hollow Knight controlas a hornet.",
-                        "/images/pic03.jpg",
-                        10500.0,
+                        "Foundation - Tabla Star y Moon",
+                        "Tabla de skate Foundation Star, Color Verde.",
+                        "https://wallride.cl/cdn/shop/files/WhatsAppImage2025-11-18at16.20.31_360x.jpg?v=1763593055",
+                        60500.0,
                         1,
-                        "Metroidvania"
+                        "Tabla"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "Lego: Batman",
-                        "Juego de aventuras de lego donde eres batman.",
-                        "/images/pic04.jpg",
-                        5500.0,
+                        "Creature - Camisa Manga Larga Reversible.",
+                        "Camisa de manga larga reversible Creature Switch.",
+                        "https://wallride.cl/cdn/shop/files/44643733_156577_80474_Switch_Reversible_Creature_Mens_Shirt_color_black_green_1000x_dbd37117-72f7-48e9-b5d0-42c1828b4910_360x.webp?v=1762886591",
+                        15500.0,
                         3,
-                        "Aventura"
+                        "Ropa"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "Elden Ring",
-                        "Juego de mundo abierto donde debes derrotar bosses.",
-                        "/images/pic05.jpg",
+                        "Slimeball - Ruedas OG Classic 99A",
+                        "Ruedas Slimeball OG Classic 99A Verdes Fosforecente.",
+                        "https://wallride.cl/cdn/shop/files/63753_1800x_5e43b02b-9f7f-4e76-94b1-bbe4f57528bb_360x.webp?v=1762875961",
                         30000.0,
                         5,
-                        "RPG"
+                        "Ruedas"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "Sekiro",
-                        "Acción intensa ambientada en Japón samurai insano.",
-                        "/images/pic06.jpg",
-                        22000.0,
+                        "Slimeball - Ruedas OG White 101A",
+                        "Ruedas Slimeball OG White 101A Blanco Perlado.",
+                        "https://wallride.cl/cdn/shop/files/images_11_b1e6d6b4-b44d-4b09-b821-55b503e286fb_360x.jpg?v=1762877253",
+                        35000.0,
                         9,
-                        "Acción"
+                        "Ruedas"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "Call Of Duty BO2",
-                        "Clásico shooter de la saga Call Of Duty.",
-                        "/images/blackOPs.jpg",
-                        19990.0,
+                        "Santa Cruz - Poleron Roskopp Dissect",
+                        "Poleron Santa Cruz Roskopp Dissect Hoodie Cement.",
+                        "https://wallride.cl/cdn/shop/files/44252766_157221_80288_Roskopp_Dissect_Pullover_Hoodie_Santa_Cruz_Mens_Sweatshirt_color_cement_1800x_04dddcc4-8701-4a42-b188-616ce25bd5b2_360x.webp?v=1762874999",
+                        29990.0,
                         2,
-                        "Shooter"
+                        "Ropa"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "2K26",
-                        "Nueva edición del simulador NBA de 2K.",
-                        "/images/2K26.jpg",
+                        "PILL - Tabla Completa Stay Free 1",
+                        "Tabla de skate completa PILL Stay Free Blue.",
+                        "https://wallride.cl/cdn/shop/products/banana-friends-complete-b2b_1800x1800.jpg?v=1628519727",
                         40000.0,
                         3,
-                        "Deportes"
+                        "Skate"
                 ));
 
                 productosRepo.save(new Productos(
                         null,
-                        "No Man's Sky",
-                        "Exploración espacial en universo infinito.",
-                        "/images/nomansky.jpg",
+                        "RIPNDIP - Poleron Lord Nermal",
+                        "Poleron RIPNDIP Lord Nermal Hoodie Leco Fossile.",
+                        "https://wallride.cl/cdn/shop/files/IMG_2967_4000x4000_e967b2a0-6c53-43f5-a197-8e93efd06499_360x.webp?v=1763651965",
                         15000.0,
                         4,
-                        "Exploración"
+                        "Ropa"
                 ));
             }
         };
