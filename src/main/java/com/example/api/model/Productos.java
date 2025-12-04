@@ -1,0 +1,29 @@
+package com.example.api.model;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Productos {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String titulo;
+    @Column(columnDefinition = "TEXT")
+    private String descripcion;
+    @Column(columnDefinition = "LONGTEXT") 
+    private String imagen;
+    private Double precio;
+    private Integer qty;
+    private String categoria;  
+}
