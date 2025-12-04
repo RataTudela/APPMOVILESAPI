@@ -8,4 +8,5 @@ import com.example.api.model.Usuario;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
     Optional<Usuario> findByEmailAndContrasena(String email, String contrasena);
     boolean existsByEmail(String email);
+    Optional<Usuario> findByEmail(String email);
 }

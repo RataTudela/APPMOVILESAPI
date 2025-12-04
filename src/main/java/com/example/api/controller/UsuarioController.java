@@ -1,6 +1,7 @@
 package com.example.api.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.api.model.RespuestaApi;
+import com.example.api.model.SolicitudActualizarClave;
 import com.example.api.model.Usuario;
 import com.example.api.repository.UsuarioRepository;
 
@@ -71,5 +74,22 @@ public class UsuarioController {
         return usuarioRepository.findByEmailAndContrasena(email, contrasena)
                 .orElseThrow(() -> new RuntimeException("Credenciales inválidas"));
     }
+
+    @PostMapping("/recuperar")
+    public RespuestaApi recuperarContrasena(@RequestBody SolicitudActualizarClave solicitud) {
+
+    Optional<Usuario> optUsuario = usuarioRepository.findByEmail(solicitud.getCorreo());
+
+    if (optUsuario.isEmpty()) {
+        return new RespuestaApi(false, "No existe un usuario con ese correo");
+    }
+
+    Usuario usuario = optUsuario.get();
+    usuario.setContrasena(solicitud.getNuevaClave());
+    usuarioRepository.save(usuario);
+
+    return new RespuestaApi(true, "Contraseña actualizada correctamente");
+    }
+
 
 }
